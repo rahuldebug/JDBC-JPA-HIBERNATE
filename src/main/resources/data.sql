@@ -1,10 +1,10 @@
-CREATE table person(
-id integer not null,
-name varchar (255) not null,
-location varchar (255) not null,
-birth_date timestamp,
-primary key (id)
-);
+--CREATE table person(
+--id integer not null,
+--name varchar (255) not null,
+--location varchar (255) not null,
+--birth_date timestamp,
+--primary key (id)
+--);
 
 INSERT INTO person( id,name,location,birth_date)
 values (1001, 'ramu', 'varanasi', CURRENT_TIMESTAMP());

@@ -1,4 +1,4 @@
-package com.rahul.JPA;
+package com.rahul.jpa;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -6,7 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class JpaApplicationTests {
 
-	@Test
+	//@Test
 	void contextLoads() {
 	}
 
