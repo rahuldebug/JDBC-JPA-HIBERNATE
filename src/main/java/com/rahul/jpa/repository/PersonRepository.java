@@ -6,8 +6,8 @@ import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Repository;
 
-@Repository
-@Transactional
+//@Repository
+//@Transactional
 public class PersonRepository {
 
     @PersistenceContext
