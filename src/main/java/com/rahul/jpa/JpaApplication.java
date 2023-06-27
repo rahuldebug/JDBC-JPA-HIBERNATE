@@ -37,6 +37,7 @@ public class JpaApplication implements CommandLineRunner {
         //repo.save(Person.builder().name("rahul").location("location").birthDate(new Date()).build());
         personRepo.save(new Person( "rahul", "jamshedpur", new Date()));
         System.out.println(courseRepo.findAll());
+        System.out.println(personRepo.findAll());
         // System.out.println(repository.insert(person1));
         //System.out.println(repository.findById(1001));
     }
