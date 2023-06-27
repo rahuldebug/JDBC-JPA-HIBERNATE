@@ -26,3 +26,6 @@ INSERT INTO person( id,name,location,birth_date)
 values (1009, 'dindu', 'varanasi', CURRENT_TIMESTAMP());
 INSERT INTO person( id,name,location,birth_date)
 values (1010, 'lindu', 'varanasi', CURRENT_TIMESTAMP());
+
+INSERT INTO course (id , name)
+VALUES (2001, 'rahul');
