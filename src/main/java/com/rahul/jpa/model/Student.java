@@ -7,9 +7,17 @@ import java.util.Optional;
 @Entity
 public class Student extends CommonModel {
     String name;
-    @OneToOne(cascade = CascadeType.ALL)
-   // @JoinColumn(name = "passport_id", referencedColumnName = "id")
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "passport_id", referencedColumnName = "id")
     Passport passport;
+
+    public Passport getPassport() {
+        return passport;
+    }
+
+    public void setPassport(Passport passport) {
+        this.passport = passport;
+    }
 
     public String getName() {
         return name;
