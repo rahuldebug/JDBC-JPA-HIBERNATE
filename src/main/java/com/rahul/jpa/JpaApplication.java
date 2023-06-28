@@ -5,6 +5,7 @@ import com.rahul.jpa.model.Student;
 import com.rahul.jpa.repository.CourseRepo;
 import com.rahul.jpa.repository.PersonRepo;
 import com.rahul.jpa.repository.StudentRepo;
+import jakarta.transaction.Transactional;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -34,6 +35,8 @@ public class JpaApplication implements CommandLineRunner {
     }
 
     @Override
+    //Transactional maintains session bean in lazy initialization
+    @Transactional
     public void run(String... args) throws Exception {
         var result = personRepo.findAll();
      //   System.out.println(result);
