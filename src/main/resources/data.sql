@@ -30,11 +30,12 @@ values (1010, 'lindu', 'varanasi', CURRENT_TIMESTAMP());
 INSERT INTO course (id , name)
 VALUES (2001, 'maths');
 
-INSERT INTO student (id , name)
-VALUES (3001, 'rahul');
+INSERT INTO passport(id, number)
+VALUES (5001,'ABC154');
+
+INSERT INTO student (id , name, passport_id)
+VALUES (3001, 'rahul',5001);
 
 INSERT INTO review (id , rating, description)
 VALUES (4001, '3','good' );
 
-INSERT INTO passport(id, number)
-VALUES (5001,'ABC154');
