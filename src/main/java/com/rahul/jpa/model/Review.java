@@ -27,8 +27,30 @@ public class Review extends CommonModel{
                 '}';
     }
 
+    public Review(String rating, String description, Course course) {
+        this.rating = rating;
+        this.description = description;
+        this.course = course;
+    }
+
     public Review(String rating, String description) {
         this.rating = rating;
+        this.description = description;
+    }
+
+    public String getRating() {
+        return rating;
+    }
+
+    public void setRating(String rating) {
+        this.rating = rating;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
         this.description = description;
     }
 

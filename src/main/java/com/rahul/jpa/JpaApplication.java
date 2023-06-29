@@ -58,6 +58,13 @@ public class JpaApplication implements CommandLineRunner {
         // System.out.println(repository.insert(person1));
         //System.out.println(repository.findById(1001));
         testManyToOne();
+        updateManyToOne();
+    }
+
+    private void updateManyToOne() {
+        Review review= new Review("5","awesome");
+        reviewRepo.save(review);
+
     }
 
     private void testManyToOne() {
@@ -66,6 +73,7 @@ public class JpaApplication implements CommandLineRunner {
         System.out.println(review);
         System.out.println(course);
     }
+
 
 
 }
