@@ -8,6 +8,14 @@ public class Review extends CommonModel{
     String rating;
     String description;
 
+    public Course getCourse() {
+        return course;
+    }
+
+    public void setCourse(Course course) {
+        this.course = course;
+    }
+
     @ManyToOne
     Course course;
     @Override

@@ -36,6 +36,7 @@ VALUES (5001,'ABC154');
 INSERT INTO student (id , name, passport_id)
 VALUES (3001, 'rahul',5001);
 
-INSERT INTO review (id , rating, description)
-VALUES (4001, '3','good' );
+INSERT INTO review (id , rating, description, course_id)
+VALUES (4001, '3','good' ,2001);
+
 
