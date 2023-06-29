@@ -1,12 +1,15 @@
 package com.rahul.jpa.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Review extends CommonModel{
     String rating;
     String description;
 
+    @ManyToOne
+    Course course;
     @Override
     public String toString() {
         return "Review{" +
