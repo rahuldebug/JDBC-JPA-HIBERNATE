@@ -1,8 +1,10 @@
 package com.rahul.jpa;
 
+import com.rahul.jpa.model.Passport;
 import com.rahul.jpa.model.Person;
 import com.rahul.jpa.model.Student;
 import com.rahul.jpa.repository.CourseRepo;
+import com.rahul.jpa.repository.PassportRepo;
 import com.rahul.jpa.repository.PersonRepo;
 import com.rahul.jpa.repository.StudentRepo;
 import jakarta.transaction.Transactional;
@@ -20,11 +22,12 @@ public class JpaApplication implements CommandLineRunner {
     CourseRepo courseRepo;
     // @Autowired
     StudentRepo studentRepo;
-
-    public JpaApplication(PersonRepo personRepo, CourseRepo courseRepo, StudentRepo studentRepo) {
+    PassportRepo passportRepo;
+    public JpaApplication(PersonRepo personRepo, CourseRepo courseRepo, StudentRepo studentRepo, PassportRepo passportRepo) {
         this.personRepo = personRepo;
         this.courseRepo = courseRepo;
         this.studentRepo = studentRepo;
+        this.passportRepo=passportRepo;
     }
     //  PersonRepository repository;
 
@@ -50,6 +53,9 @@ public class JpaApplication implements CommandLineRunner {
         Optional<Student> student= studentRepo.findById(3001);
         System.out.println(student);
         System.out.println(student.get().getPassport());
+        Optional<Passport> passport=passportRepo.findById(5001);
+        System.out.println(passport.get());
+        System.out.println(passport.get().getStudent());
         // System.out.println(repository.insert(person1));
         //System.out.println(repository.findById(1001));
     }
